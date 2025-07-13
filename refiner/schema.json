@@ -1,8 +1,0 @@
-{
-  "schemaId": "409392810684518491",
-  "name": "Example Schema",
-  "version": "1.0.0",
-  "description": "Auto-generated schema for refiner.",
-  "dialect": "sqlite",
-  "schema": []
-}
