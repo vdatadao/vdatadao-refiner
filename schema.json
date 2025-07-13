@@ -1,0 +1,100 @@
+{
+  "name": "google-profile-refiner",
+  "version": "1.0.0",
+  "description": "Refines Google profile data into structured database format",
+  "dialect": "sqlite",
+  "schema": {
+    "tables": [
+      {
+        "name": "users",
+        "columns": [
+          {
+            "name": "user_id",
+            "type": "string",
+            "primary_key": true
+          },
+          {
+            "name": "email",
+            "type": "string",
+            "nullable": false,
+            "unique": true
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "locale",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "created_at",
+            "type": "datetime",
+            "nullable": false
+          }
+        ]
+      },
+      {
+        "name": "storage_metrics",
+        "columns": [
+          {
+            "name": "metric_id",
+            "type": "integer",
+            "primary_key": true,
+            "auto_increment": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "foreign_key": "users.user_id",
+            "nullable": false
+          },
+          {
+            "name": "percent_used",
+            "type": "float",
+            "nullable": false
+          },
+          {
+            "name": "recorded_at",
+            "type": "datetime",
+            "nullable": false
+          }
+        ]
+      },
+      {
+        "name": "auth_sources",
+        "columns": [
+          {
+            "name": "auth_id",
+            "type": "integer",
+            "primary_key": true,
+            "auto_increment": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "foreign_key": "users.user_id",
+            "nullable": false
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": false
+          },
+          {
+            "name": "collection_date",
+            "type": "datetime",
+            "nullable": false
+          },
+          {
+            "name": "data_type",
+            "type": "string",
+            "nullable": false
+          }
+        ]
+      }
+    ]
+  }
+} 
