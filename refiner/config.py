@@ -61,3 +61,4 @@ class Settings(BaseSettings):
         case_sensitive = True
 
 settings = Settings() 
+SCHEMA_ID = 817239359043565642
