@@ -61,4 +61,6 @@ class Settings(BaseSettings):
         case_sensitive = True
 
 settings = Settings() 
-SCHEMA_ID = 817239359043565642  # ✅ Doğru
+SCHEMA_ID = 7
+SCHEMA_NAME = "Instagram Analytics"
+SCHEMA_URL = "https://teal-worrying-pig-281.mypinata.cloud/ipfs/bafkreidrzlwxky3rn33jx4rn6wzyelozqo22f4kinyco363amhbetavmai"
