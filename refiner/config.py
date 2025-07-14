@@ -62,5 +62,5 @@ class Settings(BaseSettings):
 
 settings = Settings() 
 SCHEMA_ID = 7
-SCHEMA_NAME = "Instagram Analytics"
+SCHEMA_NAME = "VDataDAO Data Schema"
 SCHEMA_URL = "https://teal-worrying-pig-281.mypinata.cloud/ipfs/bafkreidrzlwxky3rn33jx4rn6wzyelozqo22f4kinyco363amhbetavmai"
