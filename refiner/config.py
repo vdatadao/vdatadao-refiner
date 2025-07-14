@@ -6,12 +6,12 @@ class Settings(BaseSettings):
     """Global settings configuration using environment variables"""
     
     INPUT_DIR: str = Field(
-        default="./input",  # /input yerine ./input
+        default="./input",
         description="Directory containing input files to process"
     )
     
     OUTPUT_DIR: str = Field(
-        default="./output",  # /output yerine ./output
+        default="./output",
         description="Directory where output files will be written"
     )
     
@@ -21,17 +21,17 @@ class Settings(BaseSettings):
     )
     
     SCHEMA_NAME: str = Field(
-        default="Google Drive Analytics",
+        default="Instagram Analytics",  # Google Drive → Instagram
         description="Name of the schema"
     )
     
     SCHEMA_VERSION: str = Field(
-        default="0.0.1",
+        default="1.0.0",  # 0.0.1 → 1.0.0
         description="Version of the schema"
     )
     
     SCHEMA_DESCRIPTION: str = Field(
-        default="Schema for the Google Drive DLP, representing some basic analytics of the Google user",
+        default="Schema for Instagram data analysis",  # Google Drive → Instagram
         description="Description of the schema"
     )
     
@@ -61,4 +61,4 @@ class Settings(BaseSettings):
         case_sensitive = True
 
 settings = Settings() 
-SCHEMA_ID = 817239359043565642
+SCHEMA_ID = 817239359043565642  # ✅ Doğru
